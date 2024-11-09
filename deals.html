@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlySmart - Flight Deals</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <header>
+    <h1>Available Deals</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="payment.html">Payment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="deals">
+    <h2>Deals from <span id="from-city"></span> to <span id="to-city"></span> on <span id="travel-date"></span></h2>
+    <div id="deal-list"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 FlySmart</p>
+  </footer>
+
+  <script>
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromCity = urlParams.get('from');
+    const toCity = urlParams.get('to');
+    const travelDate = urlParams.get('date');
+
+    // Display the selected cities and date
+    document.getElementById('from-city').textContent = fromCity;
+    document.getElementById('to-city').textContent = toCity;
+    document.getElementById('travel-date').textContent = travelDate;
+
+    // Fetch and display deals based on cities (You can replace this with dynamic data)
+    const dealList = document.getElementById('deal-list');
+    dealList.innerHTML = `
+      <p>Here are some great flight deals for ${fromCity} to ${toCity} on ${travelDate}:</p>
+      <ul>
+        <li>Deal 1: $199</li>
+        <li>Deal 2: $249</li>
+        <li>Deal 3: $299</li>
+      </ul>
+    `;
+  </script>
+
+</body>
+</html>

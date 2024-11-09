@@ -1,73 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FlySmart - Cheap Flights</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlySmart - Find Cheap Flights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Header Section -->
-    <header id="header">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Deals</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>FlySmart</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="payment.html">Payment</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main Section (Flight Search) -->
-    <section id="flight-search">
-        <h2>Find Your Perfect Flight</h2>
-        <form id="flight-form">
-            <div>
-                <label for="departure">Departure City</label>
-                <input type="text" id="departure" name="departure" placeholder="Enter departure city" required>
-            </div>
-            <div>
-                <label for="destination">Destination City</label>
-                <input type="text" id="destination" name="destination" placeholder="Enter destination city" required>
-            </div>
-            <div>
-                <label for="dates">Travel Dates</label>
-                <input type="date" id="dates" name="dates" required>
-            </div>
-            <button type="submit">Search Flights</button>
-        </form>
-    </section>
+  <section id="flight-search">
+    <h2>Find the Best Deals on Flights</h2>
+    <form action="deals.html">
+      <label for="from-city">From</label>
+      <input type="text" id="from-city" name="from-city" placeholder="Enter departure city" required>
 
-    <!-- Flight Results Section (Mock Results) -->
-    <section id="flight-results"></section>
+      <label for="to-city">To</label>
+      <input type="text" id="to-city" name="to-city" placeholder="Enter destination city" required>
 
-    <!-- Deals and Offers Section -->
-    <section id="flight-deals">
-        <h2>Special Flight Deals</h2>
-        <div class="deals-container">
-            <div class="deal-card">
-                <h3>New York to Los Angeles</h3>
-                <p><strong>Price:</strong> $199</p>
-                <button class="book-btn">Book Now</button>
-            </div>
-            <div class="deal-card">
-                <h3>San Francisco to Miami</h3>
-                <p><strong>Price:</strong> $249</p>
-                <button class="book-btn">Book Now</button>
-            </div>
-            <div class="deal-card">
-                <h3>Chicago to Las Vegas</h3>
-                <p><strong>Price:</strong> $179</p>
-                <button class="book-btn">Book Now</button>
-            </div>
-        </div>
-    </section>
+      <label for="departure-date">Departure Date</label>
+      <input type="date" id="departure-date" name="departure-date" required>
 
-    <script src="script.js"></script>
+      <button type="submit">Search Flights</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 FlySmart. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>
