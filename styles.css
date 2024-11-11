@@ -1,207 +1,143 @@
-/* General reset for margins and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styles */
+/* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  background-color: #F4F4F9;
   color: #333;
-  line-height: 1.6;
 }
 
-/* Header Styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header */
 header {
-  background-color: #4CAF50; /* Green background */
-  color: #fff;
+  background-color: #00BFFF;
   padding: 20px 0;
-  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 2.5rem;
-  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
 
-header nav ul {
-  list-style: none;
+nav ul {
+  display: flex;
+  justify-content: center;
   padding: 0;
 }
 
-header nav ul li {
-  display: inline-block;
-  margin: 0 15px;
+nav ul li {
+  list-style: none;
+  margin: 0 20px;
 }
 
-header nav ul li a {
-  color: #fff;
+nav ul li a {
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-  text-decoration: underline;
+nav ul li a:hover {
+  color: #FF6F61;
 }
 
-/* Main Content Styles */
-main {
-  padding: 40px 10%;
-}
-
-/* Flight Search Section */
-#flight-search {
-  background-color: #fff;
-  padding: 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
-  border-radius: 8px;
-}
-
-#flight-search h2 {
+/* Hero Section */
+#hero {
+  background-image: url('hero-image.jpg'); /* Add a travel-related image here */
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.hero-content h2 {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.hero-content .btn-primary {
+  background-color: #FF6F61;
+  color: white;
+  padding: 15px 30px;
+  border: none;
   font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-input[type="text"],
-input[type="date"],
-select {
-  width: 100%;
+.hero-content .btn-primary:hover {
+  background-color: #D15A4C;
+}
+
+/* Flight Search Form */
+#flight-search {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.search-form input {
   padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 2px solid #ddd;
   border-radius: 5px;
+  width: 200px;
 }
 
-button[type="submit"] {
-  background-color: #4CAF50;
+.search-form button {
+  background-color: #00BFFF;
   color: white;
   padding: 10px 20px;
-  font-size: 1.2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
   transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-  background-color: #45a049;
+.search-form button:hover {
+  background-color: #0077B6;
 }
 
-/* Sort Flights Section */
-#sort-container {
-  margin-top: 40px;
-  text-align: center;
-}
-
-#sort-by {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* Flight Results Section */
-#flight-results {
-  margin-top: 40px;
-}
-
-#flight-results h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-#results-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.flight-result {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.flight-result h3 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.flight-result p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.flight-result .price {
-  font-weight: bold;
-  color: #4CAF50;
-  font-size: 1.2rem;
-}
-
-.flight-result button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s;
-}
-
-.flight-result button:hover {
-  background-color: #45a049;
-}
-
-/* Footer Section */
+/* Footer */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   margin-top: 40px;
 }
 
-footer p {
-  font-size: 1rem;
-}
-
-/* Mobile Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
-  #flight-search {
-    padding: 20px;
+  .search-form {
+      flex-direction: column;
   }
 
-  .form-group {
-    margin-bottom: 15px;
-  }
-
-  button[type="submit"] {
-    padding: 15px;
-  }
-
-  #results-container {
-    grid-template-columns: 1fr; /* Single column on mobile */
+  #hero {
+      height: 50vh;
   }
 }

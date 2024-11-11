@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FlySmart helps you find the best deals on flights to your favorite destinations.">
-  <title>FlySmart - Find Cheap Flights</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyEase - Book Your Dream Flights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>SkyEase</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="deals.html">Top Deals</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Header Section -->
-  <header>
-    <div class="logo-container">
-      <h1><a href="index.html" title="Go to homepage">FlySmart</a></h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="deals.html">Deals</a></li>
-        <li><a href="payment.html">Payment</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main>
+    <!-- Hero Section (Large Image with Call to Action) -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Fly Your Way</h2>
+            <p>Find the best flights at the most affordable prices, wherever your heart desires.</p>
+            <a href="#flight-search" class="btn-primary">Start Searching</a>
+        </div>
+    </section>
 
     <!-- Flight Search Section -->
-    <section id="flight-search">
-      <h2>Find the Best Deals on Flights</h2>
-      <form id="search-form" aria-labelledby="flight-search">
-        <div class="form-group">
-          <label for="from-city">From</label>
-          <input type="text" id="from-city" name="from-city" placeholder="Enter departure city" required aria-required="true">
-        </div>
-        <div class="form-group">
-          <label for="to-city">To</label>
-          <input type="text" id="to-city" name="to-city" placeholder="Enter destination city" required aria-required="true">
-        </div>
-        <div class="form-group">
-          <label for="departure-date">Departure Date</label>
-          <input type="date" id="departure-date" name="departure-date" required aria-required="true">
-        </div>
-        <button type="submit">Search Flights</button>
-      </form>
+    <section id="flight-search" class="container">
+        <h2>Book Your Next Adventure</h2>
+        <form id="search-form" class="search-form">
+            <input type="text" id="from-city" name="from-city" placeholder="From" required>
+            <input type="text" id="to-city" name="to-city" placeholder="To" required>
+            <input type="date" id="departure-date" name="departure-date" required>
+            <button type="submit" class="btn-secondary">Search Flights</button>
+        </form>
     </section>
 
-    <!-- Sort Flights Section -->
-    <section id="sort-container" class="hidden">
-      <label for="sort-by">Sort by:</label>
-      <select id="sort-by">
-        <option value="price">Price</option>
-        <option value="departure">Departure Time</option>
-      </select>
-    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SkyEase. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <!-- Flight Results Section -->
-    <section id="flight-results" class="hidden">
-      <h2>Flight Options</h2>
-      <div id="results-container">
-        <!-- Dynamic flight results will be injected here -->
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 FlySmart. All rights reserved.</p>
-  </footer>
-
-  <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
