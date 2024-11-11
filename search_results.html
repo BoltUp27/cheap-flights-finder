@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top Deals - SkyEase</title>
+  <title>Flight Search Results - SkyEase</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,15 +20,22 @@
     </nav>
   </header>
 
-  <!-- Main Content Section -->
+  <!-- Search Results Section -->
   <main>
-    <section id="top-deals" class="container">
-      <h2>Top Deals of the Week</h2>
-      <p>Explore some of the best flight deals we have this week, and book your next adventure at a great price.</p>
-      
-      <!-- Deals Grid -->
-      <div class="deals-container">
-        <!-- Dynamic Deal Cards will be inserted by JavaScript -->
+    <section class="search-results container">
+      <h2>Flight Search Results</h2>
+      <p>Your search for flights:</p>
+
+      <!-- Display Search Info -->
+      <div id="search-summary">
+        <p><strong>From:</strong> <span id="from-city"></span></p>
+        <p><strong>To:</strong> <span id="to-city"></span></p>
+        <p><strong>Departure Date:</strong> <span id="departure-date"></span></p>
+      </div>
+
+      <!-- Display Flight Results Dynamically -->
+      <div class="flight-results">
+        <!-- Dynamic flight cards will go here -->
       </div>
     </section>
   </main>
@@ -47,7 +54,7 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="search_results.js"></script>
 
 </body>
 </html>
