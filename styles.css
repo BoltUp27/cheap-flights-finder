@@ -1,143 +1,217 @@
-/* General Styles */
+/* General body styles */
 body {
   font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #F4F4F9;
-  color: #333;
+  color: #333; /* Dark color for text to improve visibility */
+  background-color: #f8f8f8; /* Light background color for contrast */
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-/* Header */
-header {
-  background-color: #00BFFF;
-  padding: 20px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
+/* Main section with a darker background for better contrast */
+.hero {
+  background-color: #333; /* Dark background for hero section */
+  color: white; /* Light text color */
+  padding: 50px 0;
   text-align: center;
-  margin: 0;
 }
 
+/* Hero section h1 */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff; /* White color for heading */
+}
+
+/* Hero section p */
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd; /* Slightly lighter text color */
+}
+
+/* Body content (main content section) */
+.main-content {
+  padding: 40px 20px;
+  background-color: #fff; /* White background for readability */
+  color: #333; /* Dark text */
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  color: #333; /* Ensure headers are darker for readability */
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555; /* Lighter gray text for body */
+}
+
+/* Contact page styles */
+.contact-form {
+  width: 100%;
+  max-width: 600px; /* Limit the width to 600px for better alignment */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  background-color: #fff; /* White background for the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around form */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Form input fields */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Focus state on form inputs */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Textarea for message */
+.contact-form textarea {
+  height: 150px; /* Increased height for better text area */
+}
+
+/* Submit button */
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Button hover effect */
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Title */
+.contact-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Navigation bar styling */
 nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
-  padding: 0;
 }
 
 nav ul li {
-  list-style: none;
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: color 0.3s;
+  color: #333;
+  font-size: 1.1rem;
 }
 
 nav ul li a:hover {
-  color: #FF6F61;
+  color: #007bff;
 }
 
-/* Hero Section */
-#hero {
-  background-image: url('hero-image.jpg'); /* Add a travel-related image here */
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Deals section styles */
+.deals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.deal-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.hero-content h2 {
-  font-size: 3rem;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
+.deal-card:hover {
+  transform: scale(1.05);
 }
 
-.hero-content p {
+.deal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.deal-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.deal-card p {
   font-size: 1.2rem;
-  margin: 10px 0;
+  color: #555;
 }
 
-.hero-content .btn-primary {
-  background-color: #FF6F61;
+.deal-card a {
+  text-decoration: none;
   color: white;
-  padding: 15px 30px;
-  border: none;
-  font-size: 1rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.hero-content .btn-primary:hover {
-  background-color: #D15A4C;
-}
-
-/* Flight Search Form */
-#flight-search {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.search-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.search-form input {
-  padding: 10px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  width: 200px;
-}
-
-.search-form button {
-  background-color: #00BFFF;
-  color: white;
+  background-color: #007bff;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
 }
 
-.search-form button:hover {
-  background-color: #0077B6;
+.deal-card a:hover {
+  background-color: #0056b3;
 }
 
-/* Footer */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .search-form {
-      flex-direction: column;
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+      font-size: 2.5rem;
   }
 
-  #hero {
-      height: 50vh;
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .main-content {
+      padding: 20px;
+  }
+
+  .contact-form {
+      padding: 15px;
+  }
+
+  .contact-form h2 {
+      font-size: 1.8rem;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+      padding: 10px;
+  }
+
+  .contact-form button {
+      padding: 12px;
   }
 }
