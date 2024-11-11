@@ -4,118 +4,105 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: #333; /* Dark color for text to improve visibility */
-  background-color: #f8f8f8; /* Light background color for contrast */
+  color: #333;
+  background: linear-gradient(135deg, #f3f4f6, #e1e8f0);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-/* Main section with a darker background for better contrast */
+/* Hero Section */
 .hero {
-  background-color: #333; /* Dark background for hero section */
-  color: white; /* Light text color */
-  padding: 50px 0;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  color: white;
+  padding: 80px 0;
   text-align: center;
 }
 
-/* Hero section h1 */
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
-  color: #fff; /* White color for heading */
 }
 
-/* Hero section p */
 .hero p {
-  font-size: 1.2rem;
-  color: #ddd; /* Slightly lighter text color */
+  font-size: 1.3rem;
+  color: #f1f5f9;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Body content (main content section) */
+/* Main Content Section */
 .main-content {
-  padding: 40px 20px;
-  background-color: #fff; /* White background for readability */
-  color: #333; /* Dark text */
+  padding: 50px 20px;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-top: -50px;
 }
 
 .main-content h2 {
-  font-size: 2rem;
-  color: #333; /* Ensure headers are darker for readability */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .main-content p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #555; /* Lighter gray text for body */
+  color: #555;
 }
 
-/* Contact page styles */
+/* Contact Form Styles */
 .contact-form {
   width: 100%;
-  max-width: 600px; /* Limit the width to 600px for better alignment */
-  margin: 0 auto; /* Center the form */
-  padding: 20px;
-  background-color: #fff; /* White background for the form */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around form */
-  border-radius: 8px; /* Rounded corners */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-/* Form input fields */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
+  padding: 15px;
+  margin: 12px 0;
   border: 2px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #fafafa;
   font-size: 1rem;
-  background-color: #f9f9f9;
 }
 
-/* Focus state on form inputs */
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
+.contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #007bff;
+  border-color: #4f46e5;
   outline: none;
 }
 
-/* Textarea for message */
-.contact-form textarea {
-  height: 150px; /* Increased height for better text area */
-}
-
-/* Submit button */
 .contact-form button {
   width: 100%;
   padding: 15px;
-  background-color: #007bff;
+  background-color: #4f46e5;
   color: white;
   font-size: 1.2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
-/* Button hover effect */
 .contact-form button:hover {
-  background-color: #0056b3;
+  background-color: #4338ca;
 }
 
-/* Form Title */
-.contact-form h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Navigation bar styling */
+/* Navigation Bar */
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  border-radius: 0 0 30px 30px;
 }
 
 nav ul li {
@@ -124,33 +111,35 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-size: 1.1rem;
+  color: white;
+  font-size: 1.2rem;
 }
 
 nav ul li a:hover {
-  color: #007bff;
+  color: #f9fafb;
 }
 
-/* Deals section styles */
+/* Deals Section */
 .deals-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 30px 20px;
+  background-color: #f9fafb;
 }
 
 .deal-card {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .deal-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .deal-img {
@@ -160,58 +149,62 @@ nav ul li a:hover {
 }
 
 .deal-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #333;
 }
 
 .deal-card p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
 }
 
 .deal-card a {
   text-decoration: none;
   color: white;
-  background-color: #007bff;
+  background-color: #4f46e5;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .deal-card a:hover {
-  background-color: #0056b3;
+  background-color: #4338ca;
 }
 
-/* Responsive design for mobile */
+/* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
   .hero h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .hero p {
-      font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .main-content {
-      padding: 20px;
+    padding: 20px;
   }
 
   .contact-form {
-      padding: 15px;
+    padding: 20px;
   }
 
   .contact-form h2 {
-      font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .contact-form input[type="text"],
   .contact-form input[type="email"],
   .contact-form textarea {
-      padding: 10px;
+    padding: 12px;
   }
 
   .contact-form button {
-      padding: 12px;
+    padding: 12px;
+  }
+
+  .deal-card {
+    padding: 15px;
   }
 }
