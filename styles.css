@@ -5,20 +5,31 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #f0f8ff; /* Light background color */
-  text-align: center; /* Center all text globally */
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container Class for Centering */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Header Section */
 header {
-  background-color: #007bff; /* Bright blue header */
+  background-color: #333;
   color: white;
-  padding: 30px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -27,7 +38,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 nav ul li {
@@ -37,69 +48,71 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 nav ul li a:hover {
-  color: #f8f9fa; /* Light hover effect */
+  color: #ffcc00;
 }
 
 /* Hero Section */
 #hero {
-  background-color: #ff7f50; /* Vibrant coral background */
+  background-color: #0099cc;
   color: white;
   padding: 100px 20px;
   text-align: center;
 }
 
 #hero h2 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-#hero p {
-  font-size: 1.4rem;
-  margin-bottom: 30px;
-}
-
-#hero .btn-primary {
-  background-color: #28a745; /* Modern green button */
-  color: white;
-  padding: 12px 30px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-#hero .btn-primary:hover {
-  background-color: #218838; /* Darker green on hover */
-}
-
-/* Why Use SkyEase Section */
-#why-use {
-  padding: 60px 20px;
-}
-
-#why-use h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: #ffcc00;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #f39c12;
+}
+
+/* Why Choose Section */
+#why-use {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#why-use h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
 .benefit-cards {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
   padding: 30px;
-  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 250px;
 }
 
 .card h3 {
@@ -109,13 +122,97 @@ nav ul li a:hover {
 
 .card p {
   font-size: 1.1rem;
-  color: #555;
+  color: #777;
+}
+
+/* Flight Search Section */
+#flight-search {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#flight-search h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.search-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-form .form-group {
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.search-form button {
+  background-color: #0099cc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #0077b6;
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.testimonial-card span {
+  display: block;
+  color: #777;
+  font-size: 1rem;
 }
 
 /* Deals Section */
 #deals {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 60px 20px;
+  text-align: center;
 }
 
 #deals h2 {
@@ -135,7 +232,6 @@ nav ul li a:hover {
   gap: 30px;
   justify-items: center;
   padding: 0 20px;
-  margin-top: 40px;
 }
 
 /* Deal Cards */
@@ -187,86 +283,6 @@ nav ul li a:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Flight Search Section */
-#flight-search {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
-}
-
-#flight-search h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.search-form {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.form-group {
-  max-width: 250px;
-  width: 100%;
-}
-
-.search-form input {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-}
-
-.search-form button {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search-form button:hover {
-  background-color: #0056b3;
-}
-
-/* Testimonials Section */
-#testimonials {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
-}
-
-.testimonial-cards {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.testimonial-card {
-  background-color: white;
-  padding: 30px;
-  width: 280px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-card p {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.testimonial-card span {
-  font-size: 1rem;
-  color: #007bff;
-  display: block;
-  margin-top: 15px;
-  font-style: italic;
-}
-
 /* Footer Section */
 footer {
   background-color: #333;
@@ -295,5 +311,5 @@ footer nav ul li a {
 }
 
 footer nav ul li a:hover {
-  color: #007bff;
+  color: #ffcc00;
 }
