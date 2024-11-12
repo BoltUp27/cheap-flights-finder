@@ -1,108 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyEase - Book Your Dream Flights</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Search - SkyEase</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>SkyEase</h1>
-            <nav aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="deals.html">Top Deals</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section (Large Image with Call to Action) -->
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Fly Your Way</h2>
-            <p>Find the best flights at the most affordable prices, wherever your heart desires.</p>
-            <a href="#flight-search" class="btn-primary">Start Searching</a>
-        </div>
-    </section>
+  <!-- Header Section -->
+  <header>
+    <h1>SkyEase</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deals.html">Top Deals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Flight Search Section -->
-    <section id="flight-search" class="container">
-        <h2>Book Your Next Adventure</h2>
-        <form id="search-form" class="search-form" action="search_results.html" method="GET">
-            <div class="form-group">
-                <label for="from-city">From</label>
-                <input type="text" id="from-city" name="from-city" placeholder="From" required>
-            </div>
-            <div class="form-group">
-                <label for="to-city">To</label>
-                <input type="text" id="to-city" name="to-city" placeholder="To" required>
-            </div>
-            <div class="form-group">
-                <label for="departure-date">Departure Date</label>
-                <input type="date" id="departure-date" name="departure-date" required>
-            </div>
-            <button type="submit" class="btn-secondary">Search Flights</button>
-        </form>
-    </section>
+  <!-- Flight Search Section -->
+  <section id="flight-search" class="container">
+    <h2>Find Your Flight</h2>
 
-    <!-- Benefits Section -->
-    <section id="benefits">
-        <div class="container">
-            <h2>Why Choose SkyEase?</h2>
-            <div class="benefit-cards">
-                <div class="card">
-                    <h3>Affordable Prices</h3>
-                    <p>Get the best deals on flights and save money for your vacation adventures.</p>
-                </div>
-                <div class="card">
-                    <h3>Flexible Options</h3>
-                    <p>Choose from a variety of flexible flight options to fit your schedule.</p>
-                </div>
-                <div class="card">
-                    <h3>Easy Booking</h3>
-                    <p>Our user-friendly platform makes booking your flights quick and easy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Search Form -->
+    <form id="flight-search-form" action="search_results.html" method="GET">
+      <div class="form-group">
+        <label for="from-city">From:</label>
+        <input type="text" id="from-city" name="from" placeholder="Enter departure city" required>
+      </div>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Customers Say</h2>
-            <div class="testimonial-cards">
-                <div class="testimonial-card">
-                    <p>"SkyEase made booking my flight so easy! I found the best deals in minutes."</p>
-                    <span>- John D.</span>
-                </div>
-                <div class="testimonial-card">
-                    <p>"I loved the flexibility in my options. I could pick a flight that suited my schedule perfectly."</p>
-                    <span>- Sarah L.</span>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="form-group">
+        <label for="to-city">To:</label>
+        <input type="text" id="to-city" name="to" placeholder="Enter arrival city" required>
+      </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 SkyEase. All rights reserved.</p>
-            <nav aria-label="Footer Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="deals.html">Top Deals</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
+      <div class="form-group">
+        <label for="departure-date">Departure Date:</label>
+        <input type="date" id="departure-date" name="departure" required>
+      </div>
 
-    <script src="main.js"></script>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 SkyEase. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="deals.html">Top Deals</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
 </body>
 </html>
