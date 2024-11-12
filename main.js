@@ -8,32 +8,35 @@ document.addEventListener('DOMContentLoaded', function() {
       const weeklyDeals = [
           {
               destination: 'Paris, France',
-              price: '$149',  // Reduced price
-              imgSrc: 'paris.png',  // Image path
-              link: '#'  // Link to the booking page or details page
+              price: '$299',
+              imgSrc: 'paris.png',  // Make sure the image path is correct
+              link: '#'  // Link to the booking page or a details page
           },
           {
               destination: 'Tokyo, Japan',
-              price: '$199',  // Reduced price
-              imgSrc: 'tokyo.png',  // Image path
+              price: '$499',
+              imgSrc: 'tokyo.png',  // Make sure the image path is correct
               link: '#'
           },
           {
               destination: 'New York, USA',
-              price: '$99',  // Reduced price
-              imgSrc: 'newyork.png',  // Image path
+              price: '$199',
+              imgSrc: 'newyork.png',  // Make sure the image path is correct
               link: '#'
           },
           {
               destination: 'Sydney, Australia',
-              price: '$249',  // Reduced price
-              imgSrc: 'sydney.png',  // Image path
+              price: '$399',
+              imgSrc: 'sydney.png',  // Make sure the image path is correct
               link: '#'
           }
       ];
 
       // Get the container where the deals will be displayed
       const dealsContainer = document.querySelector('.deals-container');
+
+      // Clear out any existing content to avoid duplication
+      dealsContainer.innerHTML = '';
 
       // Loop through the weeklyDeals array and dynamically create a deal card for each deal
       weeklyDeals.forEach(deal => {
