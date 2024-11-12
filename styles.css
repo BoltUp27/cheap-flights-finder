@@ -6,7 +6,6 @@ body {
   padding: 0;
   color: #333;
   background-color: #f8f8f8;
-  text-align: center;
 }
 
 /* Header Section */
@@ -19,99 +18,104 @@ header {
 
 header h1 {
   font-size: 2.5rem;
+  margin: 0;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 nav ul li a:hover {
   color: #007bff;
 }
 
-/* Search Results Section */
-.search-results.container {
-  padding: 40px 20px;
+/* Deals Section */
+#deals {
+  background-color: #fff;
+  padding: 60px 20px;
   text-align: center;
 }
 
-#search-summary {
+#deals h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#deals p {
+  font-size: 1.2rem;
+  color: #777;
   margin-bottom: 40px;
 }
 
-#search-summary p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+.deals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
 }
 
-#search-summary strong {
-  font-weight: bold;
-}
-
-/* Flight Cards */
-.flight-results {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.flight-card {
+/* Deal Cards */
+.deal-card {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.flight-card img {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
+  max-width: 300px;
+}
+
+.deal-card img {
+  max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.flight-card h3 {
+.deal-card h3 {
   font-size: 1.6rem;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
-.flight-card p {
+.deal-card p {
   font-size: 1.2rem;
-  margin: 10px 0;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.flight-card button {
-  padding: 10px;
+.deal-card a {
   background-color: #007bff;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
   font-size: 1.1rem;
+  transition: background-color 0.3s ease;
 }
 
-.flight-card button:hover {
+.deal-card a:hover {
   background-color: #0056b3;
 }
 
-.flight-card:hover {
+.deal-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Section */
@@ -119,24 +123,28 @@ footer {
   background-color: #333;
   color: white;
   padding: 20px 0;
+  text-align: center;
 }
 
-footer ul {
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+footer nav ul {
   list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
-footer ul li {
-  margin: 0 15px;
-}
-
-footer ul li a {
-  text-decoration: none;
+footer nav ul li a {
   color: white;
+  text-decoration: none;
   font-size: 1.1rem;
 }
 
-footer ul li a:hover {
+footer nav ul li a:hover {
   color: #007bff;
 }
