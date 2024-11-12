@@ -1,58 +1,81 @@
-// Wait for the DOM to load completely before executing the script
-document.addEventListener('DOMContentLoaded', function() {
-    
-  // Only run the code if we are on the deals page (checking if .deals-container exists)
-  if (document.querySelector('.deals-container')) {
-
-      // Define the weekly deals array with data (this can be updated weekly)
-      const weeklyDeals = [
-          {
-              destination: 'Paris, France',
-              price: '$299',
-              imgSrc: 'paris.png',  // Make sure the image path is correct
-              link: '#'  // Link to the booking page or a details page
-          },
-          {
-              destination: 'Tokyo, Japan',
-              price: '$499',
-              imgSrc: 'tokyo.png',  // Make sure the image path is correct
-              link: '#'
-          },
-          {
-              destination: 'New York, USA',
-              price: '$199',
-              imgSrc: 'newyork.png',  // Make sure the image path is correct
-              link: '#'
-          },
-          {
-              destination: 'Sydney, Australia',
-              price: '$399',
-              imgSrc: 'sydney.png',  // Make sure the image path is correct
-              link: '#'
-          }
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the form and results container
+    const searchForm = document.getElementById('search-form');
+    const resultsContainer = document.getElementById('results-container');
+    const searchResultsSection = document.getElementById('search-results');
+  
+    // Handle the search form submission
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+  
+      // Get form values
+      const fromCity = document.getElementById('from-city').value.trim();
+      const toCity = document.getElementById('to-city').value.trim();
+      const departureDate = document.getElementById('departure-date').value;
+  
+      if (fromCity && toCity && departureDate) {
+        // Display mock results (you can replace this with real data or API calls)
+        displayResults(fromCity, toCity, departureDate);
+  
+        // Scroll to the results section
+        searchResultsSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        alert('Please fill in all the fields');
+      }
+    });
+  
+    // Function to display results
+    function displayResults(fromCity, toCity, departureDate) {
+      // Clear previous results
+      resultsContainer.innerHTML = '';
+  
+      // Create mock flight results (this could be dynamic data from an API)
+      const mockResults = [
+        {
+          airline: 'SkyEase Airlines',
+          price: '$350',
+          departure: '2024-12-01',
+          from: fromCity,
+          to: toCity,
+          flightNumber: 'SE123',
+        },
+        {
+          airline: 'SkyAir',
+          price: '$300',
+          departure: '2024-12-02',
+          from: fromCity,
+          to: toCity,
+          flightNumber: 'SA456',
+        },
+        {
+          airline: 'FlyNow',
+          price: '$280',
+          departure: '2024-12-05',
+          from: fromCity,
+          to: toCity,
+          flightNumber: 'FN789',
+        },
       ];
-
-      // Get the container where the deals will be displayed
-      const dealsContainer = document.querySelector('.deals-container');
-
-      // Clear out any existing content to avoid duplication
-      dealsContainer.innerHTML = '';
-
-      // Loop through the weeklyDeals array and dynamically create a deal card for each deal
-      weeklyDeals.forEach(deal => {
-          const dealCard = document.createElement('div');
-          dealCard.classList.add('deal-card');  // Add a class to style the deal card
-
-          // Create the HTML content for each deal card
-          dealCard.innerHTML = `
-              <img src="${deal.imgSrc}" alt="${deal.destination}" class="deal-img"> <!-- Image -->
-              <h3>${deal.destination}</h3>  <!-- Destination Name -->
-              <p>Price: ${deal.price}</p>  <!-- Price -->
-              <a href="${deal.link}" class="btn-primary">Book Now</a>  <!-- "Book Now" button -->
-          `;
-
-          // Append the newly created deal card to the container
-          dealsContainer.appendChild(dealCard);
+  
+      // Loop through mock results and display them
+      mockResults.forEach(flight => {
+        const flightCard = document.createElement('div');
+        flightCard.classList.add('flight-card');
+  
+        flightCard.innerHTML = `
+          <h3>Flight ${flight.flightNumber}</h3>
+          <p><strong>Airline:</strong> ${flight.airline}</p>
+          <p><strong>Price:</strong> ${flight.price}</p>
+          <p><strong>Departure:</strong> ${flight.departure}</p>
+          <p><strong>From:</strong> ${flight.from}</p>
+          <p><strong>To:</strong> ${flight.to}</p>
+        `;
+  
+        resultsContainer.appendChild(flightCard);
       });
-  }
-});
+  
+      // Show the results section
+      searchResultsSection.style.display = 'block';
+    }
+  });
+  

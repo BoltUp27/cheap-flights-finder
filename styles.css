@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  max-width: 100%;
 }
 
 /* Container Class for Centering */
@@ -113,6 +114,7 @@ nav ul li a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h3 {
@@ -123,6 +125,11 @@ nav ul li a:hover {
 .card p {
   font-size: 1.1rem;
   color: #777;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Flight Search Section */
@@ -172,8 +179,8 @@ nav ul li a:hover {
 /* Testimonials Section */
 #testimonials {
   padding: 60px 20px;
-  text-align: center;
   background-color: #fff;
+  text-align: center;
 }
 
 #testimonials h2 {
@@ -189,23 +196,30 @@ nav ul li a:hover {
 }
 
 .testimonial-card {
-  background-color: white;
-  padding: 30px;
+  background-color: #f9f9f9;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 250px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-card p {
   font-size: 1.1rem;
+  color: #555;
   margin-bottom: 15px;
 }
 
 .testimonial-card span {
   display: block;
-  color: #777;
   font-size: 1rem;
+  color: #888;
+  font-style: italic;
 }
 
 /* Deals Section */
@@ -285,7 +299,7 @@ nav ul li a:hover {
 
 /* Footer Section */
 footer {
-  background-color: #333;
+  background-color: #34495e;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -308,8 +322,51 @@ footer nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 footer nav ul li a:hover {
-  color: #ffcc00;
+  color: #f39c12;
+}
+
+/* General Button Styles */
+button, .btn-primary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, .btn-primary:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .benefit-cards, .testimonial-cards {
+    flex-direction: column;
+  }
+
+  .card, .testimonial-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+  }
+
+  #hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .search-form .form-group {
+    width: 90%;
+  }
 }
