@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SkyEase offers affordable flights to your dream destinations. Book your flight now and explore the world!">
     <title>SkyEase - Book Your Dream Flights</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Optional for icons -->
 </head>
 <body>
-
     <!-- Header Section -->
-    <header role="banner">
+    <header>
         <div class="container">
             <h1>SkyEase</h1>
             <nav aria-label="Main Navigation">
                 <ul>
-                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="deals.html">Top Deals</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -26,7 +23,7 @@
     </header>
 
     <!-- Hero Section (Large Image with Call to Action) -->
-    <section id="hero" aria-label="Welcome to SkyEase">
+    <section id="hero">
         <div class="hero-content">
             <h2>Fly Your Way</h2>
             <p>Find the best flights at the most affordable prices, wherever your heart desires.</p>
@@ -35,30 +32,29 @@
     </section>
 
     <!-- Flight Search Section -->
-    <section id="flight-search" class="container" aria-labelledby="flight-search-header">
-        <h2 id="flight-search-header">Book Your Next Adventure</h2>
-        <form id="search-form" class="search-form" action="search_results.html" method="GET" aria-describedby="search-form-description">
-            <p id="search-form-description">Fill in the details below to find the best flights.</p>
+    <section id="flight-search" class="container">
+        <h2>Book Your Next Adventure</h2>
+        <form id="search-form" class="search-form" action="search_results.html" method="GET">
             <div class="form-group">
                 <label for="from-city">From</label>
-                <input type="text" id="from-city" name="from-city" placeholder="Enter Departure City" required aria-required="true">
+                <input type="text" id="from-city" name="from-city" placeholder="From" required>
             </div>
             <div class="form-group">
                 <label for="to-city">To</label>
-                <input type="text" id="to-city" name="to-city" placeholder="Enter Destination" required aria-required="true">
+                <input type="text" id="to-city" name="to-city" placeholder="To" required>
             </div>
             <div class="form-group">
                 <label for="departure-date">Departure Date</label>
-                <input type="date" id="departure-date" name="departure-date" required aria-required="true">
+                <input type="date" id="departure-date" name="departure-date" required>
             </div>
             <button type="submit" class="btn-secondary">Search Flights</button>
         </form>
     </section>
 
     <!-- Benefits Section -->
-    <section id="benefits" aria-labelledby="benefits-header">
+    <section id="benefits">
         <div class="container">
-            <h2 id="benefits-header">Why Choose SkyEase?</h2>
+            <h2>Why Choose SkyEase?</h2>
             <div class="benefit-cards">
                 <div class="card">
                     <h3>Affordable Prices</h3>
@@ -77,9 +73,9 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" aria-labelledby="testimonials-header">
+    <section id="testimonials">
         <div class="container">
-            <h2 id="testimonials-header">What Our Customers Say</h2>
+            <h2>What Our Customers Say</h2>
             <div class="testimonial-cards">
                 <div class="testimonial-card">
                     <p>"SkyEase made booking my flight so easy! I found the best deals in minutes."</p>
@@ -94,7 +90,7 @@
     </section>
 
     <!-- Footer Section -->
-    <footer role="contentinfo">
+    <footer>
         <div class="container">
             <p>&copy; 2024 SkyEase. All rights reserved.</p>
             <nav aria-label="Footer Navigation">
@@ -107,7 +103,6 @@
         </div>
     </footer>
 
-    <!-- Add optional footer scripts -->
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
 </body>
 </html>

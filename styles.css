@@ -4,207 +4,173 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: #333;
-  background: linear-gradient(135deg, #f3f4f6, #e1e8f0);
-  background-attachment: fixed;
-  min-height: 100vh;
+  color: #333; /* Dark color for text to improve visibility */
+  background-color: #f8f8f8; /* Light background color for contrast */
+  text-align: center; /* Center text by default */
 }
 
 /* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
-  color: white;
+#hero {
+  background-color: #333; /* Dark background for hero section */
+  color: white; /* Light text color */
   padding: 80px 0;
-  text-align: center;
+  text-align: center; /* Ensure text is centered */
 }
 
-.hero h1 {
-  font-size: 4rem;
+#hero h2 {
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.3rem;
-  color: #f1f5f9;
-  max-width: 600px;
-  margin: 0 auto;
+#hero p {
+  font-size: 1.2rem;
+  color: #ddd;
 }
 
-/* Main Content Section */
-.main-content {
-  padding: 50px 20px;
-  background: #fff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  margin-top: -50px;
+#hero .btn-primary {
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
-.main-content h2 {
+/* Flight Search Section */
+#flight-search {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+#flight-search h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.main-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
-}
-
-/* Contact Form Styles */
-.contact-form {
-  width: 100%;
+.search-form {
+  text-align: center; /* Center the form elements */
   max-width: 600px;
   margin: 0 auto;
-  padding: 25px;
-  background: linear-gradient(135deg, #ffffff, #f3f4f6);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+.search-form .form-group {
+  margin-bottom: 15px;
+}
+
+.search-form input, .search-form button {
+  padding: 10px;
+  font-size: 1.1rem;
   width: 100%;
-  padding: 15px;
-  margin: 12px 0;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background-color: #fafafa;
-  font-size: 1rem;
+  max-width: 400px;
+  margin: 5px auto;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #4f46e5;
-  outline: none;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 15px;
-  background-color: #4f46e5;
+.search-form button {
+  background-color: #007bff;
   color: white;
-  font-size: 1.2rem;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.contact-form button:hover {
-  background-color: #4338ca;
+.search-form button:hover {
+  background-color: #0056b3;
 }
 
-/* Navigation Bar */
-nav ul {
-  list-style: none;
-  padding: 0;
+/* Benefits Section */
+#benefits {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+#benefits h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.benefit-cards {
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
-  border-radius: 0 0 30px 30px;
+  gap: 20px;
 }
 
-nav ul li {
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+/* Testimonials Section */
+#testimonials {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  text-align: center;
+}
+
+.testimonial-card p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial-card span {
+  display: block;
+  font-size: 1rem;
+  font-style: italic;
+  color: #777;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
+footer ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-  color: #f9fafb;
-}
-
-/* Deals Section */
-.deals-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 30px 20px;
-  background-color: #f9fafb;
-}
-
-.deal-card {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.deal-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.deal-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.deal-card h3 {
-  font-size: 1.6rem;
-  color: #333;
-}
-
-.deal-card p {
   font-size: 1.1rem;
-  color: #555;
 }
 
-.deal-card a {
-  text-decoration: none;
-  color: white;
-  background-color: #4f46e5;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s;
-}
-
-.deal-card a:hover {
-  background-color: #4338ca;
-}
-
-/* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  .main-content {
-    padding: 20px;
-  }
-
-  .contact-form {
-    padding: 20px;
-  }
-
-  .contact-form h2 {
-    font-size: 2rem;
-  }
-
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    padding: 12px;
-  }
-
-  .contact-form button {
-    padding: 12px;
-  }
-
-  .deal-card {
-    padding: 15px;
-  }
+footer ul li a:hover {
+  color: #007bff;
 }
