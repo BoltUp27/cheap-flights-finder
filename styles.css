@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #f8f8f8;
+  background-color: #f8f8f8; /* Light gray background for modern feel */
 }
 
 /* Header Section */
@@ -43,30 +43,184 @@ nav ul li a:hover {
   color: #007bff;
 }
 
-/* Deals Section */
-#deals {
+/* Hero Section */
+#hero {
+  background-color: #007bff; /* Vibrant blue for attention */
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  margin: 0 0 20px 0;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+#hero .btn-primary {
+  background-color: #ff7f50; /* Vibrant coral button */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#hero .btn-primary:hover {
+  background-color: #e56b3b; /* Darker coral for hover effect */
+}
+
+/* Why Use SkyEase Section */
+#why-use {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#why-use h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.benefit-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* Flight Search Section */
+#flight-search {
   background-color: #fff;
   padding: 60px 20px;
   text-align: center;
 }
 
-#deals h2 {
+#flight-search h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-#deals p {
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.search-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-form input,
+.search-form button {
+  padding: 12px;
   font-size: 1.2rem;
-  color: #777;
-  margin-bottom: 40px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
-.deals-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+.search-form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Testimonials Section */
+#testimonials {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: space-between;
   gap: 30px;
-  justify-items: center;
-  padding: 0 20px;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+.testimonial-card p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+  color: #888;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+footer nav ul li a:hover {
+  color: #007bff;
 }
 
 /* Deal Cards */
@@ -118,33 +272,36 @@ nav ul li a:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer Section */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .benefit-cards,
+  .testimonial-cards {
+    flex-direction: column;
+  }
+
+  .card,
+  .testimonial-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
-footer p {
-  margin: 0;
-  font-size: 1rem;
-}
+@media screen and (max-width: 480px) {
+  #hero h2 {
+    font-size: 2rem;
+  }
 
-footer nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
+  #hero p {
+    font-size: 1.1rem;
+  }
 
-footer nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
+  .search-form {
+    flex-direction: column;
+  }
 
-footer nav ul li a:hover {
-  color: #007bff;
+  .search-form input,
+  .search-form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
