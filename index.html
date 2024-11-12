@@ -1,105 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkyEase - Find Cheap Flights</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyEase Flight Search</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
+
 <body>
+    <header>
+        <h1>SkyEase - Find Cheap Flights</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search Flights</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Header Section -->
-  <header>
-    <h1>SkyEase</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="deals.html">Top Deals</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+        <!-- Search Form Section -->
+        <section id="flight-search">
+            <h2>Search for Flights</h2>
+            <form id="search-form">
+                <label for="from-city">From City:</label>
+                <input type="text" id="from-city" name="from-city" placeholder="e.g., Chicago" required>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <h2>Find Your Next Adventure</h2>
-    <p>Discover amazing flight deals at unbeatable prices</p>
-    <a href="#flight-search" class="btn-primary">Start Searching</a>
-  </section>
+                <label for="to-city">To City:</label>
+                <input type="text" id="to-city" name="to-city" placeholder="e.g., Milwaukee" required>
 
-  <!-- Why Use SkyEase Section -->
-  <section id="why-use">
-    <div class="container">
-      <h2>Why Choose SkyEase?</h2>
-      <div class="benefit-cards">
-        <div class="card">
-          <h3>Best Prices</h3>
-          <p>We find the cheapest flights for your next trip, guaranteed.</p>
-        </div>
-        <div class="card">
-          <h3>Fast Search</h3>
-          <p>Our fast and simple search engine helps you book flights quickly.</p>
-        </div>
-        <div class="card">
-          <h3>Secure Payments</h3>
-          <p>Your payments are always safe with our secure checkout process.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
 
-  <!-- Flight Search Section -->
-  <section id="flight-search">
-    <h2>Search Flights</h2>
-    <form class="search-form" id="search-form">
-      <div class="form-group">
-        <input type="text" id="from-city" placeholder="From (city or airport)" required>
-      </div>
-      <div class="form-group">
-        <input type="text" id="to-city" placeholder="To (city or airport)" required>
-      </div>
-      <div class="form-group">
-        <input type="date" id="departure-date" required>
-      </div>
-      <button type="submit">Search Flights</button>
-    </form>
-  </section>
+                <button type="submit">Search Flights</button>
+            </form>
+        </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <h2>What Our Users Are Saying</h2>
-    <div class="testimonial-cards">
-      <div class="testimonial-card">
-        <p>"SkyEase made finding my flight so easy! The prices were unbeatable."</p>
-        <span>- Sarah, New York</span>
-      </div>
-      <div class="testimonial-card">
-        <p>"I found the best deal to Tokyo in minutes. I'll definitely use SkyEase again!"</p>
-        <span>- Michael, Tokyo</span>
-      </div>
-      <div class="testimonial-card">
-        <p>"Great service, fast results, and affordable options. Highly recommended!"</p>
-        <span>- Emma, Sydney</span>
-      </div>
-    </div>
-  </section>
+        <!-- Why Choose SkyEase? Section -->
+        <section id="why-choose">
+            <h2>Why Choose SkyEase?</h2>
+            <ul>
+                <li>Affordable prices for all travelers</li>
+                <li>Find flights from top airlines</li>
+                <li>Easy-to-use search interface</li>
+                <li>Get personalized flight options</li>
+                <li>Fast, reliable results</li>
+            </ul>
+        </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 SkyEase. All rights reserved.</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="deals.html">Top Deals</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"SkyEase made my flight experience so smooth and enjoyable. I highly recommend their service!" - Jane Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"Affordable fares and great service. I'll be booking again!" - John Smith</p>
+            </div>
+            <div class="testimonial">
+                <p>"I love the convenience and ease of finding cheap flights with SkyEase." - Sarah Lee</p>
+            </div>
+        </section>
 
-  <script src="main.js"></script>
-  <script src="search_results.js"></script>
+        <!-- Flight Search Results Section -->
+        <section id="search-results" style="display: none;">
+            <h2>Flight Results</h2>
+            <div id="results-container"></div>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2024 SkyEase. Helping you find the best deals on flights.</p>
+    </footer>
+
+    <!-- Link to main.js -->
+    <script src="main.js"></script>
 </body>
+
 </html>
