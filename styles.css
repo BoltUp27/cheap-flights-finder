@@ -1,16 +1,19 @@
-/* General styles */
+/* General Body Styles */
 body {
     font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
     color: #333;
+    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100vh;
+    box-sizing: border-box;
   }
   
+  /* Centering and Container */
   .container {
     width: 90%;
     max-width: 1200px;
@@ -29,11 +32,12 @@ body {
   
   header h1 {
     font-size: 2.5rem;
-    font-weight: 700;
+    margin: 0;
   }
   
   nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -43,7 +47,8 @@ body {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s ease;
   }
   
   nav ul li a:hover {
@@ -56,12 +61,11 @@ body {
     color: white;
     padding: 120px 20px;
     text-align: center;
-    border-bottom: 3px solid #16a085;
   }
   
   #hero h2 {
     font-size: 3rem;
-    font-weight: 700;
+    margin-bottom: 25px;
   }
   
   .btn-primary {
@@ -71,7 +75,8 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2rem;
-    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .btn-primary:hover {
@@ -84,12 +89,11 @@ body {
     background-color: #fff;
     padding: 80px 20px;
     text-align: center;
-    border-top: 3px solid #f39c12;
   }
   
   #why-use h2 {
     font-size: 2.5rem;
-    font-weight: 700;
+    margin-bottom: 40px;
   }
   
   .benefit-cards {
@@ -102,16 +106,15 @@ body {
   .card {
     background-color: white;
     padding: 40px;
-    width: 300px;
-    text-align: center;
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 300px;
   }
   
   .card h3 {
     font-size: 1.8rem;
-    font-weight: 700;
+    margin-bottom: 20px;
   }
   
   .card:hover {
@@ -119,90 +122,85 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
-  /* Flight Search */
+  /* Flight Search Section */
   #flight-search {
     padding: 80px 20px;
     background-color: #f1f1f1;
-    text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-top: 3px solid #16a085;
+    text-align: center;
   }
   
   .search-form {
     max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: white;
     padding: 30px;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .search-form input,
-  .search-form button {
+  .search-form input, .search-form button {
     width: 100%;
     padding: 12px;
-    font-size: 1.1rem;
     border-radius: 5px;
-  }
-  
-  .search-form input:focus {
-    border-color: #1abc9c;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
   }
   
   .search-form button {
     background-color: #1abc9c;
     color: white;
     cursor: pointer;
-    border: none;
-    transition: background-color 0.3s, transform 0.3s;
   }
   
   .search-form button:hover {
     background-color: #16a085;
-    transform: scale(1.05);
   }
   
-  /* Flight Results */
-  #flight-results {
+  /* Deals Section */
+  #deals {
     padding: 80px 20px;
-    background-color: #fff;
     text-align: center;
-    border-top: 3px solid #16a085;
+    background-color: #fff;
   }
   
-  .results-container {
+  .deals-container {
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
   }
   
-  .flight-card {
+  .deal-card {
     background-color: white;
-    padding: 25px;
-    width: 80%;
-    max-width: 600px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .flight-card h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
+  .deal-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
   }
   
-  .flight-card:hover {
+  .deal-card h3 {
+    font-size: 1.6rem;
+    margin: 15px 0;
+  }
+  
+  .deal-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
-  /* Testimonials */
+  /* Testimonials Section */
   #testimonials {
     padding: 80px 20px;
     background-color: #fff;
@@ -222,7 +220,6 @@ body {
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .testimonial-card:hover {
@@ -231,17 +228,18 @@ body {
   }
   
   .testimonial-card p {
+    font-size: 1.1rem;
     color: #555;
-    margin-bottom: 15px;
   }
   
   .testimonial-card span {
+    display: block;
     font-size: 1rem;
     color: #888;
     font-style: italic;
   }
   
-  /* Footer */
+  /* Footer Section */
   footer {
     background-color: #34495e;
     color: white;
@@ -249,8 +247,13 @@ body {
     text-align: center;
   }
   
+  footer p {
+    margin: 0;
+  }
+  
   footer nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -259,59 +262,31 @@ body {
   footer nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
   }
   
   footer nav ul li a:hover {
     color: #f39c12;
   }
   
-  /* Contact Form */
-  #contact-form {
-    padding: 80px 20px;
-    background-color: #f1f1f1;
-    text-align: center;
-  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+    }
   
-  #contact-form h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
+    .card, .testimonial-card, .deal-card {
+      width: 100%;
+      max-width: 90%;
+    }
   
-  .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    #hero h2 {
+      font-size: 2.5rem;
+    }
   
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-  }
-  
-  .contact-form button {
-    background-color: #1abc9c;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .contact-form button:hover {
-    background-color: #16a085;
-    transform: scale(1.05);
+    .search-form {
+      width: 90%;
+      padding: 25px;
+    }
   }
   
