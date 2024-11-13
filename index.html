@@ -4,50 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SkyEase - Flight Finder</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Flight Finder - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <div class="container">
-            <h1>SkyEase - Find the Best Flights</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="deals.html">Top Deals</a>
-                    <li><a href="contact.html">To Contact</a>
-                </ul>
-            </nav>
-        </div>
+        <h1>Flight Finder</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Top Deals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="hero">
         <div class="container">
-            <h2>Find Your Perfect Flight</h2>
-            <p>Save time and money with SkyEase by finding the best flight deals in seconds.</p>
-            <a href="#flight-search" class="btn-primary">Start Searching</a>
+            <h2>Find the Best Flight Deals</h2>
+            <p>Search and compare prices to get the best deals on your next flight.</p>
+            <a href="flight-search.html" class="btn-primary">Search Flights</a>
         </div>
     </section>
 
-    <!-- Why Choose SkyEase? -->
+    <!-- Why Choose Us Section -->
     <section id="why-use">
         <div class="container">
-            <h2>Why Choose SkyEase?</h2>
+            <h2>Why Choose Flight Finder?</h2>
             <div class="benefit-cards">
                 <div class="card">
-                    <h3>Fast & Easy</h3>
-                    <p>Find flights in seconds with our quick and simple search engine.</p>
-                </div>
-                <div class="card">
                     <h3>Best Prices</h3>
-                    <p>We offer the best deals by comparing prices across multiple airlines.</p>
+                    <p>We find the lowest prices for you, guaranteed.</p>
                 </div>
                 <div class="card">
-                    <h3>Worldwide Coverage</h3>
-                    <p>Whether you're flying locally or internationally, we've got you covered.</p>
+                    <h3>Easy Booking</h3>
+                    <p>Simple and fast flight booking process with just a few clicks.</p>
+                </div>
+                <div class="card">
+                    <h3>Exclusive Deals</h3>
+                    <p>Get access to exclusive flight deals only available here.</p>
                 </div>
             </div>
         </div>
@@ -56,61 +55,59 @@
     <!-- Flight Search Section -->
     <section id="flight-search">
         <div class="container">
-            <h2>Search for Flights</h2>
-            <form id="search-form">
+            <h2>Find Your Flight</h2>
+            <p>Start your flight search and explore the world.</p>
+            <div class="search-form">
                 <div class="form-group">
-                    <label for="from-city">From City:</label>
-                    <input type="text" id="from-city" name="from-city" required>
+                    <label for="from">From</label>
+                    <input type="text" id="from" name="from" placeholder="Enter departure city" required>
                 </div>
                 <div class="form-group">
-                    <label for="to-city">To City:</label>
-                    <input type="text" id="to-city" name="to-city" required>
+                    <label for="to">To</label>
+                    <input type="text" id="to" name="to" placeholder="Enter destination city" required>
                 </div>
                 <div class="form-group">
-                    <label for="departure-date">Departure Date:</label>
-                    <input type="date" id="departure-date" name="departure-date" required>
+                    <label for="date">Travel Date</label>
+                    <input type="date" id="date" name="date" required>
                 </div>
-                <button type="submit" class="btn-primary">Search Flights</button>
-            </form>
+                <button type="submit">Search Flights</button>
+            </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="container">
-            <h2>What Our Customers Say</h2>
+            <h2>What Our Users Say</h2>
             <div class="testimonial-cards">
                 <div class="testimonial-card">
-                    <p>"SkyEase made booking my flight easy and affordable. Highly recommend!"</p>
+                    <p>"Flight Finder saved me hundreds on my flight to Paris. I will always use them for my travel bookings!"</p>
                     <span>- John D.</span>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Great experience! I found a flight for half the price of other websites."</p>
+                    <p>"I love how easy it is to find deals on Flight Finder. Highly recommend!"</p>
                     <span>- Sarah L.</span>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Love how quick and simple it is to search and book flights. Will use again!"</p>
+                    <p>"Flight Finder made booking my flight so stress-free. The best flight deal I’ve ever gotten!"</p>
                     <span>- Michael W.</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 SkyEase - All Rights Reserved</p>
-            <nav>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <p>&copy; 2024 Flight Finder. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Top Deals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </footer>
 
-    <script src="main.js"></script>
 </body>
 
 </html>

@@ -1,78 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top Deals - SkyEase</title>
-  <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Deals - Flight Finder</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
+    <!-- Header -->
+    <header>
+        <h1>Flight Finder - Top Deals</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Top Deals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Header Section -->
-  <header>
-    <h1>SkyEase</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="deals.html">Top Deals</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h2>Top Flight Deals</h2>
+            <p>Exclusive offers and discounts on flights to popular destinations.</p>
+        </div>
+    </section>
 
-  <!-- Deals Section -->
-  <section id="deals">
-    <h2>Top Deals</h2>
-    <p>Check out these amazing flight deals to popular destinations!</p>
+    <!-- Deals Section -->
+    <section id="top-deals">
+        <div class="container">
+            <h2>Browse the Best Deals</h2>
+            <div class="deals-container">
+                <!-- Deal 1: New York to London -->
+                <div class="deal-card">
+                    <img src="images/london.png" alt="New York to London" class="deal-img">
+                    <h3>New York to London</h3>
+                    <p>Round-trip starting at $499</p>
+                    <a href="flight-search.html" class="btn-primary">Book Now</a>
+                </div>
 
-    <!-- Deals Container (this will be dynamically populated by JS) -->
-    <div class="deals-container">
-      <div class="deal-card">
-        <img src="tokyo.png" alt="Tokyo, Japan">
-        <h3>Tokyo, Japan</h3>
-        <p>From $350</p>
-        <a href="#">Book Now</a>
-      </div>
+                <!-- Deal 2: Los Angeles to Paris -->
+                <div class="deal-card">
+                    <img src="images/paris.png" alt="Los Angeles to Paris" class="deal-img">
+                    <h3>Los Angeles to Paris</h3>
+                    <p>Round-trip starting at $599</p>
+                    <a href="flight-search.html" class="btn-primary">Book Now</a>
+                </div>
 
-      <div class="deal-card">
-        <img src="paris.png" alt="Paris, France">
-        <h3>Paris, France</h3>
-        <p>From $299</p>
-        <a href="#">Book Now</a>
-      </div>
+                <!-- Deal 3: San Francisco to Tokyo -->
+                <div class="deal-card">
+                    <img src="images/tokyo.png" alt="San Francisco to Tokyo" class="deal-img">
+                    <h3>San Francisco to Tokyo</h3>
+                    <p>Round-trip starting at $749</p>
+                    <a href="flight-search.html" class="btn-primary">Book Now</a>
+                </div>
 
-      <div class="deal-card">
-        <img src="newyork.png" alt="New York, USA">
-        <h3>New York, USA</h3>
-        <p>From $250</p>
-        <a href="#">Book Now</a>
-      </div>
+                <!-- Deal 4: Los Angeles to Sydney -->
+                <div class="deal-card">
+                    <img src="images/sydney.png" alt="Los Angeles to Sydney" class="deal-img">
+                    <h3>Los Angeles to Sydney</h3>
+                    <p>Round-trip starting at $899</p>
+                    <a href="flight-search.html" class="btn-primary">Book Now</a>
+                </div>
 
-      <div class="deal-card">
-        <img src="sydney.png" alt="Sydney, Australia">
-        <h3>Sydney, Australia</h3>
-        <p>From $400</p>
-        <a href="#">Book Now</a>
-      </div>
-    </div>
-  </section>
+                <!-- Add more deal cards as needed -->
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 SkyEase. All rights reserved.</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="deals.html">Top Deals</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-  <script src="search_results.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Flight Finder. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Top Deals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
 
 </body>
+
 </html>
